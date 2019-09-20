@@ -50,7 +50,8 @@
 
 \author{Weixin Wang
 	\affiliation{
-		Department of Mechanical and Aerospace Engineering\\
+		Department of Mechanical \\
+		and Aerospace Engineering \\
 		George Washington University\\
 		Washingtong DC, USA, 20052\\
 		Email: weixinwang442@gmail.com
@@ -73,12 +74,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 {\it This paper presents the design and preliminary evaluation of a quasi-passive lower limb exoskeleton for walking efficiency improvement.
-The exoskeleton recycles the negative work performed by the knee joint in late swing and the ankle joint in mid-stance phases, to assist ankle push-off in late stance phase when a burst of positive power is needed.
-The exoskeleton consists of a torsion spring as an energy storage element, and two clutches attached to the spring to control the timing of recycling and releasing energy in a gait cycle.
+The exoskeleton recycles the negative work performed by the knee joint in late swing phase and the ankle joint in mid-stance phase, to assist ankle push-off in late stance phase when a burst of positive power is needed.
+The exoskeleton consists of a torsion spring as an energy storage element, and two clutches attached to both ends of the spring to control the timing of recycling and releasing energy in a gait cycle.
 The two clutches are actively controlled by two small servo motors with very low power consumption based on the plantar pressure.
 The novelty of this exoskeleton is it makes the extra kinetic energy dissipated at the knee joint reusable, by transferring it to the ankle joint to assist positive power generation during push-off for the first time.
 Eight male subjects walked with the exoskeleton engaged (EXO\_ON), disengaged (EXO\_OFF) and without the exoskeleton (NO\_EXO).
-Inverse dynamics analysis demonstrated that the biological negative work performed by the knee joint during late swing phase was reduced by of 15.9\%, and the biological positive work performed by the ankle joint during stance phase was reduced by 29.7\% comparing the EXO\_ON to the EXO\_OFF conditions.
+Inverse dynamics analysis demonstrated reduced negative biological work at the knee joint during late swing and at the ankle joint during mid-stance, as well as reduced positive biological work at the ankle joint during late stance comparing the EXO\_ON to EXO\_OFF conditions.
 These results prove the effectiveness of the exoskeleton at joint level.
 	
 Keywords: ankle exoskeleton; lightweight motor; power amplification}
@@ -99,44 +100,44 @@ Human consume more energy during walking than any other activities in daily life
 For a long time, researchers have been attempting to develop lower limb exoskeletons to assist walking.
 However, the excessive amount of power required at lower limb joints during walking leads to undesirable sizes and weights of actuators\cite{RN1}.
 For instance, the peak value of the ankle joint power during late stance plantar flexion is about 270W for a 70kg person\cite{RN2}.
-Therefore, designers have to make a tradeoff between the assisting capability and portability.
+Therefore, designers have to make a trade-off between the assisting capability and portability.
 To circumvent this dilemma, passive/quasi-passive exoskeletons were proposed\cite{RN3}.
 These exoskeletons do not directly provide external energy to human.
 \sout{They use some smart mechanical structures to provide energy by means of utilizing power from other joints, ground reactions or other synergistic action and make locomotion more energetically efficient.}
 \textcolor{red}{Instead, they use some smart mechanical structures to recycle the dissipated energy during decelerating segments in walking, and supply this recycled energy when positive power is required.}
 
 These (quasi-)passive exoskeletons typically use passive elements, mostly dampers and springs, instead of powerful actuators to apply torques at lower limb joints.
-Damper is a pure energy absorbing element to dissipate excessive kinetic energy during locomotion, which would otherwise cost extra physiological energy\cite{negativework}.
+The damper is a pure energy absorbing element to dissipate excessive kinetic energy during locomotion, which would otherwise cost extra physiological energy\cite{negativework}.
 The exoskeleton built by Walsh \emph{et al.} uses a magnetorheological damper to help the knee joint produce negative work during normal walking\cite{RN3}.
 
-Spring in theory do not produce or dissipate energy, but its ability to store and return energy makes it a good candidate to interact with human limbs. 
+The spring in theory do not produce or dissipate energy, but its ability to store and return energy makes it a good candidate to interact with human limbs. 
 Energy storage and return is also a strategy utilized by human to make locomotion more energetically efficient.
 It has been shown the muscle-tendon unit can serve as an energy storage element during walking \cite{RN16,pays}.
-By replacing tendons with physical springs, mechanical fixations can be used to replace muscles to produce the counteracting forces while the tendon is being stretched.
+By replacing tendons with physical springs, mechanical fixations can be used to replace muscles to produce the counteracting force while the tendon is being stretched.
 Exoskeletons described in \cite{RN3,RN4,RN5} use springs spanning hip joints and ankle joints, or only ankle joints to help the respective muscle-tendon units store and return energy.
 In addition, springs are also used to shape the biological leg stiffness during stance phase in running, or in other words, decrease the large load exerted at lower limb joints after heel strike \cite{RN6,RN7,RN8}.
 
 Among these exoskeletons, using external moments to assist late stance ankle plantar flexion has been well proved to benefit human walking \cite{RN5,RN9,RN10,RN11,RN12}.
-The exoskeleton built by Collins \emph{et al.}\cite{RN5} uses a spring to assist Achilles tendon to store energy in dorsiflexion during stance phase, and releases the energy to assist the following ankle plantar flexion, which successfully reduces the metabolic expenditure during walking.
+The exoskeleton built by Collins \emph{et al.}\cite{RN5} uses a spring to assist the Achilles tendon to store energy in dorsiflexion during stance phase, and supplies the energy to assist the following ankle plantar flexion, which successfully reduces the metabolic expenditure during walking.
 \sout{However, the optimal peak power of this passive ankle exoskeleton \cite{RN5} is only 0.3Nm/kg, which did not reach the theoretical optimal power effect\cite{zhang2017human}.}
-\textcolor{red}{In another work \cite{zhang2017human}, the authors even further reduced walking metabolic expenditure by applying an optimized assistive torque at ankle, which appeared higher than the torque supplied by the quasi-passive exoskeleton in \cite{RN5}.
+\textcolor{red}{In another work \cite{zhang2017human}, the authors even further reduce the walking metabolic expenditure by applying an optimized assistive torque at ankle, which appears higher than the torque supplied by the quasi-passive exoskeleton in \cite{RN5}.
 This may suggest instead of only recycling passive work from ankle dorsiflexion in stance, it could be more beneficial to have another energy source for ankle assistance.}
 
-From another perspective, knee joints absorb energy in most time of a gait cycle\cite{RN2}.
-Therefore we may use a spring instead of a damper in \cite{RN3}, to apply resistive torques at the knee joint and recycle the negative work at the same time.
+One potential candidate for the energy source is the knee joint, which absorbs energy in most time of a gait cycle\cite{RN2}.
+Therefore we may use a spring instead of the damper in \cite{RN3}, to apply resisting torques at the knee joint and recycle the negative work at the same time.
 This part of energy can be regarded as ‘external’ energy input at the ankle joint, i.e. it may be transferred and used to assist the ankle joint in late stance plantar flexion.
-This concept has also been mentioned in some other studies\cite{RN3,RN12}, but no such devices have been reported to the best of the authors' knowledge.
+This concept has also been mentioned in some other studies\cite{RN3,RN12}, but no such device has been reported to the best of the authors' knowledge.
 
 In this paper, we present a quasi-passive lower limb exoskeleton which is able to recycle energy from both the extension of knee joint in late swing phase, and the dorsiflexion of ankle joint in mid-stance phase, to assist ankle plantar flexion in late stance phase.
 The exoskeleton consists of a torsion spring to store energy, and two clutches to control the timing of energy recycling and releasing based on foot contact information.
 %In order to evaluate the effectiveness of the exoskeleton, the power of exoskeleton was measured to estimate the amount of energy recycled and released; inverse dynamics analysis was also performed to evaluate the benefits and side-effects to human during walking.
-Eight male subjects participated in a study comparing three conditions: walking with the exoskeleton engaged (EXO\_ON), disengaged (EXO\_OFF) and without the exoskeleton (NO\_EXO).
-Inverse dynamics analysis showed significant reduction of biological knee power in late swing phase and ankle power in mid- and late stance phases comparing EXO\_ON and EXO\_Off, suggesting the effectiveness of the exoskeleton in joint level.
+Eight male subjects participated in a study comparing three conditions: walking with the exoskeleton engaged (EXO\_ON), disengaged (EXO\_OFF) and without the exoskeleton (NO\_EXO) on the right leg.
+Inverse dynamics analysis showed significant reduction of the biological knee power in late swing phase and ankle power in mid- and late stance phase comparing the EXO\_ON to EXO\_Off conditions, suggesting the effectiveness of the exoskeleton at joint level.
 
 The rest of this paper is organized as follows.
 In section \ref{sec:design}, we introduce the mechanical and control system design of the proposed exoskeleton.
 Then the experiment settings and results are presented in section \ref{sec:experiment}.
-Finally, conclusion and future work are given in section \ref{sec:discussion}.
+Finally, conclusions and future work are given in section \ref{sec:discussion}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -144,16 +145,16 @@ Finally, conclusion and future work are given in section \ref{sec:discussion}.
 %%%  2. Design                 
 %%%                                     
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Design of Exoskeleton}
+\section{Design of the Exoskeleton}
 \label{sec:design}
 
 \subsection{Energy Recycling and Releasing Strategies}
 \label{subsec:Biomechanics}
 
-Lower limb joints perform both positive and negative work during each stride cycle of human walking, as shown in Fig. \ref{fig:work}.
-The stance leg transports the center of mass of human body along an arched path, usually modeled as an inverted pendulum\cite{RN13}.
-Before toe off, there is an intensive burst of energy generated at the ankle joint (red \textcolor{red}{solid} area, 40-60\% Stride, Figure \ref{fig:work}).
-This part of energy is consumed to redirect the downward velocity of the center of mass to an upward direction, and initiate the next step as the step-to-step transition \cite{RN14}.
+Lower limb joints perform both positive and negative work during each gait cycle of human walking, as shown in Fig. \ref{fig:work}.
+The stance leg transports the center of mass (COM) of human body along an arched path, usually modeled as an inverted pendulum\cite{RN13}.
+Before toe off, there is an intensive burst of energy generated at the ankle joint (red \textcolor{red}{solid} area, 40-60\% Stride, Fig. \ref{fig:work}).
+This part of energy is consumed to redirect the downward velocity of the COM to an upward direction, and initiate the next step as the step-to-step transition \cite{RN14}.
 This process is referred to as push-off, in which the energy dissipated in the collision between the opposite leg and ground is compensated by the positive work generated by the ankle joint.
 Push-off costs nearly 45\% of the metabolic energy expenditure of human walking\cite{RN15}.
 
@@ -161,21 +162,21 @@ Push-off costs nearly 45\% of the metabolic energy expenditure of human walking\
 	\centering
 	\includegraphics[width=0.45\textwidth]{Figure1.eps}
 	\caption{Joint power during human walking.
-	Typical work rate of the knee and ankle joints over a gait cycle is shown (adapted from \cite{RN2}).
-	The negative work performed by the knee joint in terminal swing (blue hatched area) and the ankle joint in mid-stance (red hatched area) are possible sources of energy to assist push-off (red \textcolor{red}{solid} area).}
+	Typical work rates of the knee and ankle joints over a gait cycle are shown (adapted from \cite{RN2}).
+	The negative work performed by the knee joint in late swing (blue hatched area) and by the ankle joint in mid-stance (red hatched area) are possible sources of energy for assisting push-off (red \textcolor{red}{solid} area).}
 	\label{fig:work}
 \end{figure}
 
 \sout{The main challenge in designing a passive exoskeleton is that, even if we know how to assist human, it is still very difficult to recycle negative work from human without too many side-effects.}
 \textcolor{red}{Even though this indicates push-off is the best time to supply energy, designing a passive exoskeleton is still challenging since it needs to recycle energy from human without adding hindering forces or moments.}
-Measurements in vivo suggest that considerable amount of negative work performed by the ankle joint during mid-stance dorsiflexion is stored in the Achilles tendon and used for the following push-off \cite{RN16}.
+Measurements in vivo suggest that a considerable amount of negative work performed by the ankle joint during mid-stance dorsiflexion is stored in the Achilles tendon, and used for the following push-off \cite{RN16}.
 In this process, the mechanical behavior of the Achilles tendon resembles a spring which is stretched to store energy and then recoils to release energy.
-\sout{Nonetheless, plantar flexors (gastrocnemius and soleus) should contract isometrically to provide an anchor for Achilles tendon when it is stretched. For the isometric contraction metabolic energy is consumed though no mechanical energy is produced by these muscles\cite{RN17}. Thus, we can assume that it is feasible to obtain the negative work from ankle in its dorsiflexion motion during stance (red hatched area, 15-40\% Stride, Figure \ref{fig:work}) to replace the function of Achilles tendon and relax ankle plantar flexors.}
+\sout{Nonetheless, plantar flexors (gastrocnemius and soleus) should contract isometrically to provide an anchor for Achilles tendon when it is stretched. For the isometric contraction metabolic energy is consumed though no mechanical energy is produced by these muscles\cite{RN17}. Thus, we can assume that it is feasible to obtain the negative work from ankle in its dorsiflexion motion during stance (red hatched area, 15-40\% Stride, Fig. \ref{fig:work}) to replace the function of Achilles tendon and relax ankle plantar flexors.}
 \textcolor{red}{Though no mechanical energy input is needed from muscles, the plantar-flexors (gastrocnemius and soleus) need to provide a counteracting force in order for the angular motion of the ankle to stretch the Achilles tendon for energy storage.
 This force is achieved through muscle isometric contraction, which requires metabolic energy expenditure though no mechanical energy is produced \cite{RN17}.
-Thus, in this paper we propose it is beneficial to recycle the negative work from ankle in its dorsiflexion motion during stance (red hatched area, 15-40\% Stride, Figure \ref{fig:work}) with a physical spring and a mechanical fixation of its proximal end, so that plantar-flexors are freed from exerting the force.}
+Thus, in this paper we propose it is beneficial to recycle the negative work from the ankle joint dorsiflexion during stance (red hatched area, 15-40\% Stride, Fig. \ref{fig:work}) with a physical spring and a mechanical fixation of its proximal end, so that plantar-flexors are freed from exerting the counteracting force.}
 
-In terminal swing phase, the knee joint performs a large amount of negative work during extension (blue hatched area, 80-100\% Stride, Figure \ref{fig:work}).
+In the late swing phase, the knee joint performs a large amount of negative work during extension (blue hatched area, 80-100\% Stride, Fig. \ref{fig:work}).
 %In this period, the thigh and shank can be modeled as a jointed double-pendulum pinned at the knee joint\cite{RN2}.
 %When knee extends, the lower segment (shank) of the jointed pendulum is returning to its neutral position, being accelerated by gravity.
 %To prevent hyper-extension, the knee joint needs to perform negative work to decelerate the shank and this process is accomplished by knee flexors (mainly hamstrings).
@@ -190,40 +191,41 @@ Therefore, we also propose it is beneficial to recycle the negative work perform
 \begin{figure}[b]
 	\centering
 	\includegraphics[width=8.5cm]{Figure2.eps}
-	\caption{Mechanical design of quasi-passive exoskeleton.
-	(a) Schematic of the exoskeleton highlighting key components; (b) The exoskeleton worn on a subject.}
+	\caption{Mechanical design of the quasi-passive exoskeleton.
+	(a) The schematic of the exoskeleton with key components listed; (b) The exoskeleton worn on a subject.}
 	\label{fig:model}   
 \end{figure}
 
 There are several design objectives of the exoskeleton.
 First, the exoskeleton should properly recycle the negative work from both the knee joint in late swing and the ankle joint in mid-stance, and release the energy to assist ankle plantar flexion during push-off.
-Second, because the energy recycled from the knee joint needs to be released approximately half of a gait cycle later (from late swing to the next late stance), the exoskeleton should also be able to store the energy for a specific amount of time.
+Second, because the energy recycled from the knee joint needs to be released approximately half of a gait cycle later (from late swing to the next late stance), the exoskeleton should be able to store the energy for a specific amount of time.
 Third, during other periods of a gait cycle when the exoskeleton is not working functionally, it should not hinder the natural movements of the lower limb.
 \sout{Finally, the exoskeleton should be lightweight and comfortable enough to minimize its side-effects.}
 \textcolor{red}{Finally, the exoskeleton should be lightweight and comfortable enough to mitigate the effects of added mass and extra kinematic constraints imposed by the structures.}
 
-As shown in Fig. \ref{fig:model}(a), the exoskeleton consists of an ankle brace, a torsion spring and two motor controlled clutches which are integrated into a clutch-spring unit, a compression baselayer pant, a pressure insole (not shown) and the electronic control system (not shown).
+As shown in Fig. \ref{fig:model}(a), the exoskeleton consists of an ankle brace, a torsion spring with two motor controlled clutches which are integrated into a clutch-spring unit, a compression baselayer pant, a pressure insole (not shown) and the electronics hardware (not shown).
 Fig. \ref{fig:model}(b) shows the quasi-passive exoskeleton worn on a healthy subject.
 %The main idea of our device is to use two clutches to control the recycle and release of energy in a torsion spring.
 The supporting structure of the exoskeleton is the ankle brace, where the shank and foot parts are connected by a hinged joint.
 The torsion spring is used to store the recycled mechanical energy, with its two ends fixed to two rotatory clutches, which are used to control the timing of recycling and releasing energy.
 The clutch-spring unit is fixed to the shank part of the ankle brace.
-Two ropes are connected in series with the clutch-spring unit and span the knee joint (knee rope) and ankle joint (ankle rope) to \sout{track the joint angle and }exert external moments on these joints.
 
 %When the exoskeleton is working, the two ropes exert resistant moments to the joints during energy recycling, and assistive moments during energy releasing.
 
 \begin{figure}[b]
 	\centering
 	\includegraphics[width=8cm]{Figure3.eps}
-	\caption{The thigh fixation: baselayer pants with seat belts sewed on.}
+	\caption{The thigh fixation: baselayer pants with seat belts sewed into them.}
 	\label{fig:pants}   
 \end{figure}
 
+Two ropes are connected in series with the torsion spring with two clutches, and span the knee joint (knee rope) and ankle joint (ankle rope) to \sout{track the joint angle and }exert external moments on these joints.
 The lower end of the ankle rope is fixed to the foot part of the ankle brace.
 Since the knee joint rotates with a larger angle in swing extension than the ankle joint does in late stance plantar flexion, the moment arm at ankle is designed to be large enough to coordinate the traveling distance between the knee and ankle.
 Therefore, an aluminum alloy bar is extended backwards from the foot part of the ankle brace to provide a large moment arm.
+
 As for the knee rope, it in principle should be rigidly fixed to the thigh.
-However, because the thigh tapers distally, the fixation tends to slide off when a downwards force is exerted by the rope.
+However, because the thigh tapers distally, the fixation tends to slide off when a downward force is exerted by the rope.
 Using a rigid hip brace to tackle this problem is unacceptable to us because of the extra weight it introduces.
 Inspired by the soft exo-suit developed in \cite{RN20}, we come up with a slightly compromised solution, which uses baselayer pants to provide an elastic connection to the waist.
 In order to minimize the sliding between the pants and the thigh, non-deformable safety belts are sewed into the pants along the paths through which the downward force passes to the waist, as shown in Fig. \ref{fig:pants}.
@@ -231,7 +233,7 @@ In order to minimize the sliding between the pants and the thigh, non-deformable
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=8.5cm]{Figure4.eps}
-	\caption{Schematics of the clutch-spring unit. (a) 3D model highlighting key components; (b) exploded view}
+	\caption{Schematics of the clutch-spring unit. (a) The 3D model with key components listed; (b) The exploded view.}
 	\label{fig:clutch}   
 \end{figure}
 
@@ -240,19 +242,19 @@ The 3D model and exploded view of the clutch-spring unit are shown in Fig. \ref{
 Instead of using an ordinary extension or compression spring, a torsion spring is chosen as the energy storage element, for main consideration that the two clutches and the spring can be encapsulated into a compact unit.
 The design of the clutches is based on traditional ratchets, which is inspired by\cite{RN19}.
 The position of the pawl is actively controlled through gears by a small servo motor (DS215MG, KST Digital Technology, Guangdong, China) embedded in the shaft of the clutch-spring unit on each side.
-The maximum output torque of the motor is 0.036 Nm.
+The stall torque of the motor is 0.036 Nm.
 When the pawl is disengaged, the ratchet wheel can rotate freely in both directions; when the pawl is engaged, the ratchet wheel is only allowed rotate in one direction.
 The motor is rigidly connected to the pawl in the disengaging direction and elastically connected in the engaging direction.
 The return elasticity of the pawl is realized by two small ratchet springs assembled between the motor shaft and the gear to push the pawl back, when the ratchet wheel rotates in the allowable direction and potentially disengages the pawl.
 
-A groove is designed to be outside the ratchet wheel which serves as a pulley to hold the ropes.
+Grooves are designed to be outside the ratchet wheels which serve as pulleys to hold the ropes.
 Each end of the torsion spring is fixed to the ratchet wheel by screws and rope clamps.
 When the ratchet is locked by engaging the pawl, the direction that releases the spring is prohibited. 
 Namely, when both clutches are locked, the elastic energy of the spring is locked into the clutch-spring unit, and no force in the torsion spring passes to the ropes.
-The shaft holding the two ratchets serves as the supporting structure of the spring-clutch unit and is fixed to the shank part of the ankle brace as shown in Fig. \ref{fig:model}(a).
+The shaft holding the two ratchets serves as the supporting structure of the spring-clutch unit, and is fixed to the shank part of the ankle brace as shown in Fig. \ref{fig:model}(a).
 Voids are also designed into the shaft to decrease its weight.
 
-The total mass of the device is 832 g, with 623g worn on the shank and 209 g worn on the foot.
+The total mass of the exoskeleton is 832 g, with 623g worn on the shank and 209 g worn on the foot.
 A list of the major components with their models/material, masses and locations are shown in
 Table 1.
 
@@ -292,8 +294,8 @@ Table 1.
 	\centering
 	\includegraphics[width=17cm]{workingprocess.eps}
 	\caption{The working process of the exoskeleton in a gait cycle.
-	Top: elastic potential energy in the spring; middle: contacting status of the heel and toe with the ground, status of the knee and ankle clutches; bottom: schematic of the quasi-passive exoskeleton working conditions.
-	The blue arrows show the rotation directions of the clutches, and the black arrows show the directions of forces in the ropes.}
+	Top: elastic potential energy in the spring; middle: contacting status of the heel and toe with the ground, status of the knee and ankle clutches; bottom: schematics of the quasi-passive exoskeleton working conditions.
+	The blue arrows indicate the rotating directions of the clutches, and the black arrows indicate the directions of forces in the ropes.}
 	\label{fig:workprocess}   
 \end{figure*}
 
@@ -301,8 +303,8 @@ The working process of the exoskeleton in a gait cycle is shown in Fig. \ref{fig
 The description below begins from the swing phase, for the complete energy recycling cycle of the exoskeleton starts here.
 At the beginning of swing phase (Fig. \ref{fig:workprocess}(a)), the two clutches are unlocked.
 During late swing (Fig. \ref{fig:workprocess}(b)), the knee joint extends from its maximum flexion angle to full extension.
-As a consequence, the knee rope stretches the torque spring to harvest energy and applies a flexion torque at the knee joint to assist hamstrings in decelerating the shank.
-The ankle clutch is locked before the knee joint starts extension in order to decouple the ankle joint, so that the force in the spring is exerted on the clutch instead of the ankle rope.
+As a consequence, the knee rope stretches the torsion spring to harvest energy and applies a flexion torque at the knee joint to assist hamstrings in decelerating the shank.
+The ankle clutch is locked before the knee joint starts extending in order to decouple the ankle joint, so that the force in the spring is exerted on the clutch instead of the ankle rope.
 Before the knee joint fully extends, the knee clutch is locked to store the harvested energy.
 
 In early stance (Fig. \ref{fig:workprocess}(c)), the ankle joint naturally achieves foot flat through slight plantar flexion motion, and the knee joint also undergoes slight flexion motion, both of which are in the direction that releases the energy in the torsion spring.
@@ -310,12 +312,12 @@ However, because the two clutches remain locked in this period, both joints are 
 Therefore, the recycled energy in the torsion spring is preserved and no force is passed to the ropes causing hindering moments on the knee and ankle joints.
 
 When the shank approaches its vertical position in mid-stance (Fig. \ref{fig:workprocess}(d)), the torsion spring begins to be stretched again by the ankle rope to recycle energy from ankle.
-The onset of recycling is determined by the original rope length, which can be adjusted to change the amount of energy recycled from ankle.
-It is important to unlock the ankle clutch during mid-stance when the ankle rope is stretching the torsion spring, because in this duration the pawl is unloaded and only a small torque from the motor is needed to disengage it.
+The onset of recycling is determined by the original ankle rope length, which can be adjusted to change the amount of energy recycled from ankle.
+It is important to unlock the ankle clutch during mid-stance when the ankle rope is stretching the torsion spring, because the pawl is unloaded and only a small torque from the motor is needed to disengage it.
 The knee clutch keeps locked throughout this period.
 
-In late stance (Fig. \ref{fig:workprocess}(e)), a burst of positive power is needed at the ankle joint to redirect the velocity of the center of mass of human.
-In this process, the force in the spring is passed to the ankle rope and exerts a plantar flexion torque at the ankle joint to perform positive mechanical work.
+In late stance (Fig. \ref{fig:workprocess}(e)), a burst of positive power is needed at the ankle joint to redirect the velocity of the COM of body.
+In this process, the force in the torsion spring is passed to the ankle rope and exerts a plantar flexion torque at the ankle joint to perform positive mechanical work.
 As ankle plantar flexion progresses, the torsion spring recoils and the previously recycled energy is finally released.
 The ankle clutch keeps unlocked throughout this process to allow force transmission between the torsion spring and the ankle joint, while the knee clutch keeps locked to decouple the knee joint from the spring.
 
@@ -324,10 +326,9 @@ This means they should return to their initial positions to prepare for the next
 In this period, because both pawls are disengaged, we can simplify the spring-clutch unit as a rigid body.
 That is, if one ratchet wheel returns to its initial position, the other returns automatically.
 
-We use a return spring to accelerate the returning process of the two ratchet wheels.
-The return spring is connected between the ratchet wheel on the knee side, and the shaft of the spring-clutch unit.
-It drags the two ratchet wheels back to their initial positions.
-An almost negligible side-effect is that when the torsion spring is stretched in late swing, the return spring is also stretched, causing some energy wasted.
+We use a return spring to accelerate the returning process of the two ratchet wheels, which is connected between the ratchet wheel on the knee side, and the shaft of the spring-clutch unit.
+The return spring drags the two ratchet wheels back to their initial positions.
+An almost negligible side-effect is that when the torsion spring is stretched in late swing, the return spring is also stretched, which causes some energy wasted.
 However, the return spring can be much springier than the torsion spring provided it can overcome the friction force between the ratchet wheels and the shaft.
 Therefore, the amount of energy wasted by the return spring should be small. 
 
@@ -339,7 +340,7 @@ Therefore, the amount of energy wasted by the return spring should be small.
 	\centering
 	\newcommand{\tabincell}[2]{\begin{tabular}{@{}#1@{}}#2\end{tabular}}
 	\renewcommand{\arraystretch}{1.3}
-	\caption{Allowable time interval and plantar pressure criteria of clutch motion}
+	\caption{Allowable time interval and plantar pressure criteria of clutch motions}
 	\begin{center}
 		\label{tab:control}
 		\begin{tabular}{c c c c} 
@@ -359,13 +360,13 @@ Therefore, the amount of energy wasted by the return spring should be small.
 
 
 The control system of the exoskeleton (shown in Fig. \ref{fig:control}) includes an 800 mA$\cdot$h lithium battery, a micro controller (Arduino NANO), two motors and a pressure insole.
-The supply voltage of Arduino NANO and the servo motors are 6V-8V and 4.5V-8.5V respectively.
+The supply voltage of the Arduino NANO and the servo motors are 6V-8V and 4.5V-8.5V respectively.
 So a 8V lithium battery is used to power the control system.
-The supply voltage of the plantar pressure sensors uses the 5V output from the micro controller. 
+The 5V output from the micro controller is used as the supply voltage of the plantar pressure sensors. 
 
 Different from active exoskeletons, the control scheme of the quasi-passive exoskeleton is not to apply torques at lower joints by actuators, but to specify the timing to lock and unlock the two clutches.
 It is reasonable to use the plantar pressure information for this control objective, as the most frequently referenced timing is push-off.
-The pressure insole is placed between the ankle brace and foot to detect the heel strike, toe off and mid-stance events.
+The pressure insole is placed between the ankle brace and foot to detect heel strike, toe off and mid-stance events.
 Six force sensing resistors are sewed into the insole, with four of them placed under forefoot to detect toe off, and the rest two placed under heel to detect heel strike.
 Because precise measurement is not needed, the four sensors under forefoot and the two under heel are electronically wired in parallel respectively. 
 
@@ -379,6 +380,7 @@ Because precise measurement is not needed, the four sensors under forefoot and t
 Based on the discussions in Section \ref{subsec:Working process}, locking and unlocking the ankle clutch as well as locking the knee clutch can be performed within some time intervals, whereas unlocking the knee clutch should be performed at a specific moment in a gait cycle.
 The detailed descriptions of the allowed time intervals to perform these clutch movements, and how these timings are deduced from plantar pressures are listed in Table \ref{tab:control}.
 \sout{Because there are no pressure throughout the swing phase, the movements of the clutches are controlled with predetermined time delay, according to the human normal walking speed 1.3m/s.}
+
 \textcolor{red}{In this current study, the timing of the clutches are designed according to the normal step frequency at 55 strides (full gait cycles) per minute (corresponding to around 1.3 m/s walking speed).
 More specifically, based on a typical gait cycle, the ankle and knee clutches should lock between 0s to 0.2s and 0.2s to 0.4s respectively after swing phase begins, which motivates the choices of the time delays listed in Table \ref{tab:control} after considering the delay in the mechanical system.
 Similarly, the timing for unlocking the ankle and knee clutches are chosen based on the deduced mid-stance and toe off from plantar pressures.}
@@ -404,26 +406,26 @@ From the human subject experiment data in \cite{RN5,RN18}, they are roughly esti
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=8.5cm]{kneeparameters.eps}
-	\caption{Statics and geometric relationship between the exoskeleton and knee joint.}
+	\caption{The statics and geometric relationships between the exoskeleton and knee joint.}
 	\label{fig:kneeparameters}
 \end{figure}
 
 \begin{figure}[t]
 	\centering
 	\includegraphics[width=8.5cm]{ankleparameters.eps}
-	\caption{Statics and geometric relationship between the exoskeleton and ankle joint.}
+	\caption{The statics and geometric relationships between the exoskeleton and ankle joint.}
 	\label{fig:ankleparameters}
 \end{figure}
 
 %The ratchet radius is $r$. The distance from the fixed point of the thigh to the center of the knee is $L_\textrm1$. The distance between the fixed point of the ankle brace to the center of the knee is $L_\textrm2$. The initial knee rope length is $L_\textrm{kneerope}^0$. The vertical distance from the center of the clutch-spring unit to the fixed point of the ankle brace is $L_\textrm{shankarm}$ (fixed to 10 cm). The distance between the thigh fixed point and the knee ratchet connection point can be calculated as $L_\textrm{knee}$ by the geometrical relationship. The length of the foot support bar is $L_\textrm{footarm}$.  The initial ankle rope length is $L_\textrm{anklerope}^0$. The distance between the foot fixed point and the ankle ratchet connection point can be calculated as $L_\textrm{ankle}$.
 
-The tatics and geometric relationships between the exoskeleton and joints are shown in Fig. \ref{fig:kneeparameters} and \ref{fig:ankleparameters}.
+The statics and geometric relationships between the exoskeleton and joints are shown in Fig. \ref{fig:kneeparameters} and \ref{fig:ankleparameters}.
 The forces in the two ropes spanning the knee and ankle joints while they are performing negative power are calculated as follows:
 \begin{gather}
 	f_\mathrm{kneerope} = \frac{k(L_\mathrm{kneerope}-L_\mathrm{kneerope}^0)}{r^2} \\
 	f_\mathrm{anklerope} = \frac{k(L_\mathrm{anklerope}-L_\mathrm{anklerope}^0+\Delta L_\mathrm{kneerope})}{r^2},
 \end{gather}
-where $r$ is the torsion spring radius, $k$ is the stiffness coefficient of the torsion spring, $L_\mathrm{kneerope}$, $L_\mathrm{anklerope}$ and $L_\mathrm{kneerope}^0$, $L_\mathrm{anklerope}^0$ are the length and initial length of the two ropes, and $\Delta L_\mathrm{kneerope}$ is the final length change of the knee rope after knee extension in late stance phase.
+where $r$ is the torsion spring radius, $k$ is the stiffness coefficient of the torsion spring, $L_\mathrm{kneerope}$, $L_\mathrm{anklerope}$ and $L_\mathrm{kneerope}^0$, $L_\mathrm{anklerope}^0$ are the length and initial length of the two ropes, and $\Delta L_\mathrm{kneerope}$ is the final length change of the knee rope after knee extension in late swing phase.
 
 Then, using the notations in Fig. \ref{fig:kneeparameters} and \ref{fig:ankleparameters}, the negative power and work of the exoskeleton applied at the knee and ankle joints are
 \begin{gather}
@@ -433,8 +435,8 @@ Then, using the notations in Fig. \ref{fig:kneeparameters} and \ref{fig:anklepar
 	W_\mathrm{ankle} = \frac{1}{2}k(\Delta L_\mathrm{kneerope}+\Delta L_\mathrm{anklerope})^2 - W_\mathrm{knee}
 \end{gather}
 where $\dot{\theta}_\mathrm{knee}$, $\dot{\theta}_\mathrm{ankle}$ are the joint velocities, and $\Delta L_\mathrm{anklerope}$ is the final length change of the ankle rope after dorsiflexion in mid-stance.
-From the normal values of the joint velocities and angles during walking at around 1.3 m/s, and the geometric relationships, we calculate the peak negative power and work of the exoskeleton as functions of the design parameters listed in Table \ref{tab:Exoskeleton parameters}.
-Then based on the pre-determined upper bounds on the negative power and work, and assuming the wearer weighs 65 kg, we choose the design parameters accordingly.
+From the normal values of joint velocities and angles during walking at around 1.3 m/s, and the geometric relationships, we calculate the peak negative power and work of the exoskeleton as functions of the design parameters listed in Table \ref{tab:Exoskeleton parameters}.
+Then based on the pre-determined upper bounds on the negative power and work, and assuming the wearer weighs around 65 kg, we choose the design parameters accordingly.
 
 %The energy that the exoskeleton recycled is:
 %\begin{equation}
@@ -468,21 +470,21 @@ Then based on the pre-determined upper bounds on the negative power and work, an
 
 The stiffness of the torsion spring can be used to change the maximum work that is able to be recycled by the exoskeleton without exaggerating the geometric parameters.
 In this current prototype, the stiffness is chosen as 1 Nm/rad, which results in some appropriate geometric lengths, and the final design of the exoskeleton is of compact dimensions as shown in Fig. \ref{fig:model}.
-For wearers weighing more than 65 kg, a larger torsion spring stiffness may be chosen because more energy is needed to be stored in the exoskeleton.
+For wearers weighing more than 65 kg, a larger torsion spring stiffness may be chosen because more energy is needed to be stored in the exoskeleton, and vice versa.
 
 \section{Experimental Evaluation}
-\label{sec:experiment}
+\label{sec:experiment}  
 
-\subsection{Subjects}
+\subsection{Experimental Protocols}
+
 Eight male subjects (average age = $21.25 \pm2.49$ years) who were free from musculoskeletal injuries or diseases participated in the study.
 The average body mass and height of the subjects were $66.88\pm3.91$kg and $1.77\pm0.03$ m.
 Subjects gave informed consents that were approved by the local Medical Ethical Committee before participation.
-The subjects were permitted to suspend the experiment at any time.   
+The subjects were permitted to suspend the experiment at any time. 
 
-\subsection{Experimental Protocols}
 Three walking conditions were conducted in the present study: (i) normal walking without exoskeletons (NO\_EXO), (ii) walking with the operating exoskeleton (EXO\_ON), and (iii) walking with the exoskeleton without the knee or ankle ropes (EXO\_OFF).
 The NO\_EXO condition is used as the baseline, and the EXO\_OFF condition is included to evaluate the exoskeleton without being affected by its own weight and \sout{the possible kinematic constraints it might impose on human.} \textcolor{red}{the kinematic constraints imposed by the foot, shank braces and the artificial ankle joint.}
-The participants wore the exoskeleton only on their right side for both the EXO\_ON and EXO\_OFF conditions.
+The participants wore the exoskeleton only on the right leg for both the EXO\_ON and EXO\_OFF conditions.
 During the experiment, all participants wore the same running shoes on both feet. 
 
 In order to make the participants sufficiently adapted to the exoskeleton, each participant completed a training session \textcolor{red}{one day before} the formal data collection.
@@ -506,7 +508,7 @@ The average walking speed of the participants during data collections were 1.3$\
 	\caption{Experiment setup.
 	A motion capture system (including six cameras, fifteen makers on the subject and two markers on each rope) was used to collect walking kinematics data, and three force plates were used to measure ground reaction forces.
 	Two load cells were used to measure the forces in the two ropes.
-	Subjects wore the exoskeleton only on their right ride.
+	Subjects wore the exoskeleton only on the right leg.
 	Markers were placed on lower limbs following the Helen Hayes marker set.}
 	\label{fig:Environment}
 \end{figure}
@@ -514,7 +516,7 @@ The average walking speed of the participants during data collections were 1.3$\
 The experiment setup is shown in Fig. \ref{fig:Environment}.
 The kinematic data of lower limbs were recorded by 15 reflective markers attached on the participates following the Helen-Hayes marker set \cite{RN24} \textcolor{red}{without the upper body}.
 The markers were tracked by a 3D motion capture system with six cameras (Motion Analysis, Santa Rosa, CA, USA) at 120 Hz and analyzed by the Cortex Motion Analysis Software.
-Simultaneously, the ground reaction forces (GRFs) were sampled at 1200 Hz by three muti-axis forceplates (400$\times$600 mm$^{2}$, Bertec, Columbus, OH, USA), which were embedded in a 12 meter long and 1 meter wide straight walkway.
+Simultaneously, the ground reaction forces (GRFs) were sampled at 1200 Hz by three muti-axis force plates (400$\times$600 mm$^{2}$, Bertec, Columbus, OH, USA), which were embedded in a 12 meter long and 1 meter wide straight walkway.
 Trials were recognized as successful only if the subject contacted the force plates with the complete right foot.
 For the EXO\_ON condition, two load cells (LCM300 Series, Futek, Irvine, CA, USA) were used to measure the forces in the two ropes.
 Matched analog amplifiers (Futek, Irvine, CA, USA) and a data acquisition module were used to magnify and collect the analog force signals at 200 Hz.
@@ -522,31 +524,31 @@ Additionally, two markers were attached on each rope to measure the moment arms 
 
 In post processing, the marker positions and the GRFs were filtered by a zero-lag third order Butterworth low-pass filter with the cutoff frequency at 6 Hz and 30 Hz respectively.
 We obtained joint angles, velocities and accelerations from the marker positions with inverse kinematics calculations in Matlab (MathWorks, Natick, MA, USA) \textcolor{red}{using the algorithm in \cite{RN24}.
-The anthropometric data for each subject were measured, and the lower limb segment masses and COMs were adapted from the normal relative body segment masses data measured with college aged males in \cite{de1996adjustments}.
-Total joint moments and powers were calculated from the kinematic data and GRFs using Newton-Euler method \cite{kane1985dynamics}.}
+The anthropometric data for each subject were measured, and the lower limb segment mass and COM were adapted from the normal relative body segment mass data measured with college aged males in \cite{de1996adjustments}.
+Total joint moments and power were calculated from the kinematic data and GRFs using the Newton-Euler method \cite{kane1985dynamics}.}
 
 For the EXO\_ON condition, the total joint moments and power consisted of two parts: the exoskeleton part produced by the torsion spring, and the biological part produced by muscles.
-The total joint moments and power were those obtained from inverse dynamics analysis.
+The total joint moments and power were those obtained from the inverse dynamics analysis.
 The exoskeleton moments were calculated by the product of the force recorded by the load cells and the corresponding moment arms measured from the two markers on the ropes.
-The moment arms were defined as the distance between the ropes and the joint centers, i.e. $r_\mathrm{knee}$ and $r_\mathrm{ankle}$ in Fig. \ref{fig:kneeparameters}, \ref{fig:ankleparameters}.
-Then the exoskeleton power was calculated by the product of joint velocities and the exoskeleton torques.
-Biological joint moments and power during the EXO\_ON condition were defined as subtracting the exoskeleton parts from the total joint moments and power.
+The moment arms were defined as the distance between the ropes and the joint centers, i.e. $r_\mathrm{knee}$ and $r_\mathrm{ankle}$ in Fig. \ref{fig:kneeparameters} and Fig. \ref{fig:ankleparameters}.
+Then the exoskeleton power was calculated by the product of joint velocities and the exoskeleton moments.
+Biological joint moments and power during the EXO\_ON condition were defined by subtracting the exoskeleton parts from the total joint moments and power.
 \sout{To evaluate how much energy is recycled from knee and ankle and finally released to assist push-off, the total exoskeleton work done to the ankle and the knee joints were calculated by integrating the exoskeleton powers over time.}
-For the NO\_EXO and the EXO\_OFF conditions, the biological joint moments and power were defined as the total joint moments and power.
-\textcolor{red}{The work during each gait phase was obtained by integrating the corresponding power over time.}
+For the NO\_EXO and the EXO\_OFF conditions, the biological joint moments and power were the same as the total joint moments and power.
+\textcolor{red}{The work during a specific period was obtained by integrating the corresponding power over time.}
 
 Joint kinematics and kinetics results were segmented into individual strides based on heel-strike events detected from GRFs.
 All moments and power were normalized by the weights of the subjects.
-For each subject in each condition, the results were averaged across successful trials from heel contact (0\%) to the next heel contact (100\%).
+For each subject in each condition, the results were averaged across successful trials from heel strike (0\%) to the next heel strike (100\%).
 Then the results were further averaged across the eight subjects.
-In order to compare the angles, moments and power of the ankle and knee joints among the three walking conditions (EXO\_ON, EXO\_OFF, and NO\_EXO), one-way repeated measures analyses of variance (ANOVA) was used with significance level set as $p<0.05$.
+In order to compare the angles, moments and power of the lower limb joints among the three walking conditions (EXO\_ON, EXO\_OFF, and NO\_EXO), one-way repeated measures analyses of variance (ANOVA) was used with significance level set as $p<0.05$.
 
 \subsection{Expected Outcomes}
 
 \textcolor{red}{As discussed in previous sections, the exoskeleton is designed to recycle the negative work from the knee joint in late swing phase, and the negative work from the ankle joint in mid-stance phase, to assist the ankle joint generating positive work in late stance phase.
 Therefore, we anticipate three major outcomes in joint dynamics in this study:
 (i) The biological knee joint moment and power are expected to be reduced in the EXO\_ON compared to the EXO\_OFF and NO\_EXO conditions in late swing phase;
-(ii) The biological ankle joint moment and power are expected to be reduced in the EXO\_ON compared to the EXO\_OFF and NO\_EXO conditions in mid-stance dorsiflexion, and (iii) in late stance plantarflexion.}
+(ii) The biological ankle joint moment and power are expected to be reduced in the EXO\_ON compared to the EXO\_OFF and NO\_EXO conditions in mid-stance dorsiflexion, and (iii) in late stance plantar flexion.}
 
 \subsection{Results and Discussions}
 
@@ -572,15 +574,14 @@ In the second stage, the slope became milder, indicating the spring was stretche
 	\centering
 	\includegraphics[width=17cm]{exo.eps}
 	\caption{The moments and power of knee and ankle joints in the EXO\_ON condition.
-	The total and biological data are shown in blue and red lines, respectively.
+	The total and biological data are shown in blue dash-dot and red solid lines, respectively.
 	The shaded area represents the torque and power provided by the quasi-passive exoskeleton.
-	All of the data are averaged across eight subjects.
 	Stance phase and swing phase are separated by the black dotted line.}
 	\label{fig:exo}
 \end{figure*}
 
 \subsubsection{Exoskeleton Power and Work}
-For the EXO\_ON condition, the total (dashed blue), exoskeleton (shaded), and biological (red) joint moments and power averaged across eight subjects are shown in Fig. \ref{fig:exo}.
+For the EXO\_ON condition, the total (blue dash-dot), exoskeleton (shaded), and biological (red solid) joint moments and power averaged across eight subjects are shown in Fig. \ref{fig:exo}.
 
 In the late swing phase, the maximal moment and negative power of the exoskeleton applied to the knee joint were $0.093\pm0.017$ Nm/kg and $0.271\pm0.037$ W/kg respectively.
 The negative work produced by the exoskeleton over late swing phase (80-100\% stride) was $1.43\pm0.36$ J (area A$_{1}$ in Fig. \ref{fig:exo}), accounting for 28\% of the total negative knee work during the same period.
@@ -588,20 +589,20 @@ This suggests the exoskeleton successfully recycled some negative work from the 
 
 In the middle and late stance phase, the exoskeleton produced a moment in the same direction as the biological ankle moment.
 The maximal exoskeleton moment applied to the ankle joint was $0.156\pm0.013$ Nm/kg.
-The maximal negative power of the exoskeleton during dorsiflexion was $0.126\pm0.029$ W/kg, and the maximal positive power during plantarflexion was $0.449\pm0.029$ W/kg.
-The negative work produced by the exoskeleton to the ankle joint was $1.66\pm0.28$ J (area A$_{2}$ in Fig. \ref{fig:exo}), accounting for 13\% of the total negative ankle work during the same period (30\%-50\%).
+The maximal negative power of the exoskeleton during dorsiflexion was $0.126\pm0.029$ W/kg, and the maximal positive power during plantar flexion was $0.449\pm0.029$ W/kg.
+The negative work produced by the exoskeleton to the ankle joint was $1.66\pm0.28$ J (area A$_{2}$ in Fig. \ref{fig:exo}), accounting for 13\% of the total negative ankle work (30\%-50\%).
 The positive work produced by the exoskeleton was $2.39\pm0.35$ J (area A$_{3}$ in Fig. \ref{fig:exo}) , accounting for 20\% of the total positive ankle work (50\%-60\%).
 \sout{The utilization coefficient of energy of the quasi-passive exoskeleton was about 77.34\%.}
-These results suggest the exoskeleton is able to recycle some negative work from the ankle joint during dorsiflexion, and assist it in push off.
-\textcolor{red}{The ratio of the energy released at push off to that recycled from the knee and ankle joints was about 77.34\%.}
+These results suggest the exoskeleton is able to recycle some negative work from the ankle joint during mid-stance dorsiflexion, and assist it in push-off during late stance plantar flexion.
+\textcolor{red}{The ratio of the energy released at push-off to that recycled from the knee and ankle joints was about 77.34\%.}
 
-\subsubsection{Lost energy due to elastic anchor}
+\subsubsection{Lost Energy due to Elastic Anchor}
 A part of energy was lost because of the elastic anchor on the pants.
-The exoskeleton produced a resistant torque on the knee joint in the stance phase, which can be observed from the forces in the knee rope in Fig. \ref{fig:force}, as well as the increased extension moment and negative power of the biological knee at around 40\% of the gait cycle in Fig. \ref{fig:exo}. 
+The exoskeleton produced a hindering torque on the knee joint in the stance phase, which can be observed from the forces in the knee rope in Fig. \ref{fig:force}, as well as the increased biological moment and negative power at the knee joint from 40\% to 55\% of the gait cycle in Fig. \ref{fig:exo}. 
 The maximal hindering torque produced by the exoskeleton was $0.083\pm0.024$ Nm/kg, and the corresponding maximal power was $0.177\pm0.069$ W/kg.
 
 In normal walking, the knee joint undergoes slight flexion in stance, which causes the distance between the anchor on the thigh and the clutch-spring unit to decrease.
-Since the pants were not entirely rigid even though some non-deformable safety belts were sewed into it, there was still some residue force in the rope after the knee clutch locked.
+Since the pants were not entirely rigid even though some non-deformable safety belts were sewed into it, there were still some residue forces in the rope after the knee clutch locked.
 As the knee flexed and extended, the residue force exerted a hindering moment at the knee joint, and some energy supposed to be recycled in the torsion spring was dissipated by the pants.
 This is an inevitable side-effect for an elastic anchor, which might be reduced if a better fixation can be applied.
 The flexible exoskeleton built by Lee \emph{et al.} \cite{exosuit} uses a unique support frame that withstands vertical loads while maintaining the natural curvature of the wearer's lower body, which could be used in the future work.
@@ -611,54 +612,53 @@ The flexible exoskeleton built by Lee \emph{et al.} \cite{exosuit} uses a unique
 	\includegraphics[width=17cm]{compare.eps}
 	\caption{Right Leg Joint kinematics and kinetics.
 	The joint angle, biological moment and power (from top to bottom) are shown for the ankle, knee and hip joints (from left to right) for the EXO\_ON (red solid line), EXO\_OFF (blue dash-dot line) and NO\_EXO (gray dashed line) conditions.
-	The stance phase and swing phasec are separated by black dotted lines.
-	The markers $*$ and $\circ$ indicate significant differences ($p\pm0.05$) when compare the EXO\_ON condition to the EXO\_OFF condition and the NO\_EXO condition, respectively.}
+	The stance phase and swing phase are separated by black dotted lines.
+	The markers $*$ and $\circ$ indicate significant differences ($p<0.05$) when compare the EXO\_ON condition to the EXO\_OFF condition and the NO\_EXO condition, respectively.}
 	\label{fig:kinetics_r}
 \end{figure*}
 
 \subsubsection{Changes in Kinematics}
 Joint kinematics, biological moments and power in the three conditions of the right leg where the exoskeleton was worn are presented in Fig. \ref{fig:kinetics_r}.
-The EXO\_ON, EXO\_OFF and NO\_EXO conditions correspond to the red, blue dot-dash and grey dashed lines, respectively.
-The knee joint \textcolor{red}{and hip joint} angle over the whole stride for all three walking conditions had no significant differences.
+The EXO\_ON, EXO\_OFF and NO\_EXO conditions correspond to the red solid, blue dot-dash and gray dashed lines, respectively.
+The knee joint \textcolor{red}{and hip joint} angles over the whole stride for all three walking conditions had no significant differences.
 The peak ankle dorsiflexion angle during the stance phase in the EXO\_ON condition ($11.6\pm2.5$ degrees) was significantly smaller than that in the EXO\_OFF condition ($15.7\pm3.8$ degrees, $p=0.0298$).
-A possible explanation is that the exoskeleton supplied some energy recycled from the knee joint to assist ankle plantarflexion, which in turn lowered the necessary dorsiflexion angle of the ankle joint to store the needed energy.
-In other words, the stretched spring (by the knee joint) applied a large moment at ankle, which might prevent it achieving the normal dorsiflexion angle.
+A possible explanation is that the exoskeleton supplied some energy recycled from the knee joint to assist ankle plantar flexion, which in turn lowered the necessary dorsiflexion angle for the ankle joint to store the needed energy.
+In other words, the stretched spring (by the knee joint) applied a large moment at the ankle, which might prevent it achieving the normal dorsiflexion angle.
 
 \subsubsection{Reductions in Biological Moment and Power}
 The maximal knee flexion moment during the late swing phase was significantly reduced by 42\% ($p = 0.0004$) and 34.6\% ($p = 0.0102$) when comparing the EXO\_ON ($0.083\pm0.017$ Nm/kg) to the NO\_EXO ($0.143\pm0.032$ Nm/kg) and EXO\_OFF conditions ($0.127\pm0.035$ Nm/kg) , respectively.
-This reduction indicates that the exoskeleton provided considerable flexion moment and partially replaced muscles on the thigh to generate torques to decelerate the shank.
-Furthermore, the biological negative knee work during the late swing phase had significant reduction of 15.9\% ($p = 0.0138$) when comparing EXO\_ON ($-0.051\pm0.012$ W/kg) to EXO\_OFF ($-0.061\pm0.016$ W/kg) conditions.
-This reduced work seems to be recycled by the exoskeleton. However, the reduction from the NO\_EXO condition was not significant (p = 0.1875), which might indicate the negative effects of the weight introduced by the exoskeleton are still too large and counteracted the assisting effects.
+This reduction indicates that the exoskeleton provided considerable flexion moments and partially replaced muscles on the thigh to generate torques to decelerate the shank.
+Furthermore, the biological negative knee work during the late swing phase had significant reduction of 15.9\% ($p = 0.0138$) when comparing the EXO\_ON ($-0.051\pm0.012$ W/kg) to EXO\_OFF ($-0.061\pm0.016$ W/kg) conditions.
+This reduced work seems to be recycled by the exoskeleton. However, the reduction from the NO\_EXO condition was not significant (p = 0.1875), which might indicate the negative effects of the extra weight introduced by the exoskeleton are still too large and counteracted the assisting effects.
 
-The most beneficial outcome of the exoskeleton was the reduction of the plantar flexion moment of the ankle joint during middle and late stance phase.
+One of the most positive outcomes of the exoskeleton was the reduction of the plantar flexion moment of the ankle joint during middle and late stance phase.
 Comparing EXO\_ON condition ($1.347\pm0.096$ Nm/kg) to the NO\_EXO condition ($1.491\pm0.071$ Nm/kg), 9.6\% ($p = 0.0052$) significant reduction was reported, while the reduction was not significant in terms of the EXO\_OFF  condition ($p = 0.0876$).
-These reductions might reflect reduced calf muscle forces due to the partial unloading of the Achilles’ tendon by the exoskeleton.
+These reductions might indicate reduced calf muscle forces due to the partial unloading of the Achilles’ tendon by the exoskeleton.
 The biological ankle negative work in the EXO\_ON condition ($0.193\pm0.046$ W/kg) during dorsiflexion was significantly decreased by 31.2\% ($p = 0.0089$) from the EXO\_OFF condition ($0.280\pm0.062 W/kg$) , while the reduction from the NO\_EXO condition was not significant ($p = 0.4086$).
-During plantarflexion, the biological ankle positive work decreased significantly by 9.3\% ($p = 0.0027$) when comparing the EXO\_ON condition ($0.119\pm0.025$ W/kg) to the NO\_EXO condition (($0.131\pm0.028 W/kg$)) and by 29.7\% ($p = 0.0201$) to the EXO\_OFF condition ($0.169\pm0.35$ W/kg).
-From these calculated reductions, it can be concluded that the exoskeleton supplied the harvested energy to assist ankle plantarflexion in the late stance. 
+During plantar flexion, the biological ankle positive work decreased significantly by 9.3\% ($p = 0.0027$) when comparing the EXO\_ON condition ($0.119\pm0.025$ W/kg) to the NO\_EXO condition ($0.131\pm0.028 W/kg$) and by 29.7\% ($p = 0.0201$) to the EXO\_OFF condition ($0.169\pm0.35$ W/kg).
+From these reductions, it can be concluded that the exoskeleton supplied the harvested energy to assist ankle plantar flexion in late stance. 
 
 \textcolor{red}{The hip joint moment and power did not show any significant differences over the entire gait cycle.
-The insignificant difference in hip joint power in initial swing seems to be caused by the weight of the exoskeleton.
-As the exoskeleton is designed for assisting the knee and ankle joints, it was expected that the hip joint was not affected by the exoskeleton.
-In addition, the inverse kinematics and dynamics of the left leg where no exoskeleton was worn in the EXO\_ON and EXO\_OFF conditions were calculated.
-However, no significant differences were found among the three conditions for the left leg.
+As the exoskeleton is designed for assisting the knee and ankle joints, it was expected that the hip joint was not affected a lot by the exoskeleton.
+In addition, the inverse kinematics and dynamics of the left leg where no exoskeleton was worn in the EXO\_ON and EXO\_OFF conditions were also calculated.
+However, no significant differences were found among the three conditions for the left leg, thus the data is omitted here.
 This might suggest the asymmetry of not wearing an exoskeleton on the left leg did not contribute a lot to the changes in kinematics and kinetics found in the right leg.}
 
 \section{Conclusions and Future Work}
 \label{sec:discussion}
-In this paper, we presented a quasi-passive lower limb exoskeleton which is able to recycle the energy at the knee joint in late swing extension, and the energy at the ankle joint in stance dorsiflexion to assist push-off.
+In this paper, we present a quasi-passive lower limb exoskeleton which is able to recycle the negative work from the knee joint in late swing extension, and from the ankle joint in stance dorsiflexion to assist the ankle joint in push-off.
 The major component of the exoskeleton is the clutch-spring unit which consists of a torsion spring as the energy storage element, and two active controlled clutches attached at both ends of the spring to control the timing of recycling and releasing energy.
-The novelty of this exoskeleton lies in the energy transfer mechanism from the knee joint to the ankle joint, which makes the dissipated energy in decelerating the shank reused to activate the velocity redirection of COM through push-off.
-Similar to a regenerative braking decelerating a hybrid car, this mechanism has the potential to make exoskeleton more efficient.
+The novelty of this exoskeleton lies in the energy transferring mechanism from the knee joint to the ankle joint, which makes the dissipated energy in decelerating the shank reused to activate the velocity redirection of COM through push-off.
+Similar to a regenerative braking decelerating a hybrid car, this mechanism has the potential to make walking more efficient.
 
 The functionality of the exoskeleton is verified by measuring the forces in the two ropes, \textcolor{red}{which indicates the energy is properly recycled and released by the torsion spring controlled through the ratchets.}
 \sout{The results indicate that the negative work performed by both joints is properly recycled and stored by the exoskeleton, and finally released to assist push-off.}
 Inverse kinematics and dynamics analysis were performed on eight male subjects in three different walking conditions (NO\_EXO, EXO\_ON and EXO\_OFF).
-\sout{Except ankle moment in late stance, all of the expected reduction of moment and power at knee and ankle were found to be significant comparing EXO\_ON to EXO\_OFF, suggesting that the strategy of energy recycling and releasing is beneficial to human walking at joint level. However, only during push-off, the power reduction at ankle is significant comparing EXO\_ON with NO\_EXO, indicating the extra weight and motion constraints introduced by the exoskeleton is still nonnegligible in comparison to the benefits.}
-\textcolor{red}{Comparing the EXO\_ON to EXO\_OFF scenarios, it can be seen that biological moment and power were significantly reduced during the expected phases of movement (with the exception of the ankle moment in late stance phase).
+\sout{Except ankle moment in late stance, all of the expected reduction of moment and power at knee and ankle were found to be significant comparing EXO\_ON to EXO\_OFF, suggesting that the strategy of energy recycling and releasing is beneficial to human walking at joint level. However, only during push-off, the power reduction at ankle is significant comparing EXO\_ON with NO\_EXO, indicating the extra weight and motion constraints introduced by the exoskeleton is still non-negligible in comparison to the benefits.}
+\textcolor{red}{Comparing the EXO\_ON to EXO\_OFF conditions, it can be seen that biological moment and power were significantly reduced during the expected phases of movement (with the exception of the ankle moment in late stance phase).
 This indicates the strategy of energy recycling and releasing is beneficial to human walking at joint level.
-However, the extra weight and motion constraints introduced by the exoskeleton have a non-negligible effect on its use.
-This is indicated by the fact that a significant power reduction in the EXO\_ON case compared with the NO\_EXO case is seen only during pushoff.}
+However, the extra weight and motion constraints introduced by the exoskeleton have a non-negligible effect on its uses.
+This is indicated by the fact that a significant power reduction in the EXO\_ON condition compared with the NO\_EXO condition is seen only during push-off.}
 
 As future work, some efforts will be put into improving the mechanical and control systems.
 Since the pressure sensors underfoot cannot provide any information in the swing phase, IMUs (Inertial Measurement Units) will be used to acquire the knee angle as an input to the control system \cite{IMU2}.
