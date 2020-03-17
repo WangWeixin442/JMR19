@@ -1,5 +1,5 @@
 %%% use twocolumn and 10pt options with the asme2ej format
-\documentclass[twocolumn,cleanfoot,10pt]{asme2ej}
+\documentclass[10pt]{asme2ej}
 %\usepackage{epstopdf}
 \usepackage{epsfig} %% for loading postscript figures
 \usepackage{graphicx}
@@ -9,6 +9,13 @@
 \usepackage{subcaption}
 \usepackage{stfloats}
 \usepackage{threeparttable}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lfoot{JMR-19-1300}
+\cfoot{Fu}
+\rfoot{\thepage}
 
 \usepackage{array}
 \usepackage{algorithmic}
