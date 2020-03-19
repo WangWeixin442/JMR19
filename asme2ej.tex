@@ -491,7 +491,7 @@ During the experiment, all participants wore the same running shoes on both feet
 In order to make the participants sufficiently adapted to the exoskeleton, each participant completed a training session one day before the formal data collection.
 During the training, each participant completed two practice walking sessions each for 20 minutes under the EXO\_ON and EXO\_OFF conditions.
 The training time was determined to be similar to \cite{RN5}.
-On the same day before the data collection, the participants were asked to walk under the EXO\_ON and the EXO\_OFF conditions for another one or two minutes for warming up.
+On the same day before the data collection, the participants were asked to walk under the EXO\_ON and EXO\_OFF conditions for another one or two minutes for warming up.
 
 During the data collection, ten successive trials were conducted under each walking condition for one subject.
 Each trial was to walk along a 12 meter long walkway.
@@ -531,9 +531,9 @@ For the EXO\_ON condition, the total joint moments and power consisted of two pa
 The total joint moments were those obtained from the inverse dynamics analysis, and the total joint power was calculated by the dot product of the joint velocity and moment.
 The exoskeleton moments were calculated by the product of the forces recorded by the load cells and the corresponding moment arms measured from the two markers on the ropes.
 The moment arms were defined as the distance between the ropes and the joint centers, i.e. $r_\mathrm{knee}$ and $r_\mathrm{ankle}$ in Fig. \ref{fig:kneeparameters} and Fig. \ref{fig:ankleparameters}.
-Then the exoskeleton power was calculated by the product of joint velocities and the exoskeleton moments.
-Biological joint moments and power during the EXO\_ON condition were defined by subtracting the exoskeleton parts from the total joint moments and power.
-For the NO\_EXO and the EXO\_OFF conditions, the biological joint moments and power were the same as the total joint moments and power.
+Then the exoskeleton power was calculated by the product of joint velocities and exoskeleton moments.
+Biological joint moments and power during the EXO\_ON condition were defined by subtracting the exoskeleton part from the total joint moments and power.
+For the NO\_EXO and EXO\_OFF conditions, the biological joint moments and power were the same as the total joint moments and power.
 The work during a specific period was obtained by integrating the corresponding power over time.
 
 Joint kinematics and kinetics results were segmented into individual strides based on heel-strike events detected from GRFs.
@@ -547,7 +547,7 @@ In order to compare the angles, moments and power of the lower limb joints among
 As discussed in previous sections, the exoskeleton is designed to recycle the negative work from the knee joint in late swing phase, and the negative work from the ankle joint in mid stance phase, to assist the ankle joint generating positive work in late stance phase.
 Therefore, we anticipate three major outcomes in joint dynamics in this study:
 (i) The biological knee joint moment and power are expected to be reduced in the EXO\_ON compared to the EXO\_OFF and NO\_EXO conditions in late swing phase;
-(ii) The biological ankle joint moment and power are expected to be reduced in the EXO\_ON compared to the EXO\_OFF and NO\_EXO conditions in mid-stance dorsiflexion, and (iii) in late stance plantar flexion.
+(ii) The biological ankle joint moment and power are expected to be reduced in the EXO\_ON compared to the EXO\_OFF and NO\_EXO conditions in mid stance dorsiflexion, and (iii) in late stance plantar flexion.
 
 \subsection{Results and Discussions}
 
@@ -563,7 +563,7 @@ The functionality of the mechanical and control systems is verified by the recor
 The forces in three typical gait cycles of an exoskeleton wearer are depicted in Fig. \ref{fig:force}.
 The average peak force in the knee rope (blue line) was 55$\pm$6 N, indicating the spring was stretched by the knee joint, and therefore some energy was stored in the torsion spring in late swing.
 The average peak force in the ankle rope (orange line) was 73$\pm$5 N.
-It can be clearly seen that the force increasing pattern in the ankle rope can be divided into two stages by different slopes during mid-stance phase.
+It can be clearly seen that the force increasing pattern in the ankle rope can be divided into two stages by different slopes during mid stance phase.
 In the first stage, a sharp increase indicates that the stretched spring (by the knee joint) began to exert force at the ankle, which led to a sudden change in the force.
 In the second stage, the slope became milder, indicating the spring was stretched again by the ankle and began to store energy.
 This result demonstrates the energy is properly recycled and released by the torsion spring as designed.
@@ -581,7 +581,7 @@ This result demonstrates the energy is properly recycled and released by the tor
 \subsubsection{Changes in Kinematics}
 Joint angles, biological moments and power in the three conditions of the right leg where the exoskeleton was worn are presented in Fig. \ref{fig:kinetics_r}.
 The EXO\_ON, EXO\_OFF and NO\_EXO conditions correspond to the red solid, blue dot-dash and gray dashed lines, respectively.
-The knee joint and hip joint angles over the whole stride for all three walking conditions had no significant differences.
+The knee joint and hip joint angles over the entire stride cycle for all three walking conditions had no significant differences.
 The peak ankle dorsiflexion angle during the stance phase in the EXO\_ON condition ($11.6\pm2.5$ degrees) was significantly smaller than that in the EXO\_OFF condition ($15.7\pm3.8$ degrees, $p=0.0298$).
 A possible explanation is that the exoskeleton supplied some energy recycled from the knee joint to assist ankle plantar flexion, which in turn lowered the necessary dorsiflexion angle for the ankle joint to store the needed energy.
 In other words, the stretched spring (by the knee joint) applied a large moment at the ankle, which might prevent it achieving the normal dorsiflexion angle.
@@ -589,7 +589,7 @@ In other words, the stretched spring (by the knee joint) applied a large moment 
 \begin{figure*}[th]
 	\centering
 	\includegraphics[width=17cm]{compare.eps}
-	\caption{Right Leg Joint kinematics and kinetics.
+	\caption{Right leg joint kinematics and kinetics.
 		The joint angle, biological moment and power (from top to bottom) are shown for the ankle, knee and hip joints (from left to right) for the EXO\_ON (red solid line), EXO\_OFF (blue dash-dot line) and NO\_EXO (gray dashed line) conditions.
 		The stance phase and swing phase are separated by black dotted lines.
 		The markers $*$ and $\circ$ indicate significant differences ($p<0.05$) comparing the EXO\_ON condition to the EXO\_OFF condition and the NO\_EXO condition, respectively.}
@@ -598,7 +598,6 @@ In other words, the stretched spring (by the knee joint) applied a large moment 
 
 \subsubsection{Exoskeleton Power and Work}
 For the EXO\_ON condition, the total (blue dash-dot), exoskeleton (shaded), and biological (red solid) joint moments and power averaged across eight subjects are shown in Fig. \ref{fig:exo}.
-
 In late swing phase, the maximal moment and negative power of the exoskeleton applied to the knee joint were $0.093\pm0.017$ Nm/kg and $0.271\pm0.037$ W/kg respectively.
 The negative work produced by the exoskeleton over late swing phase (80-100\% stride) was $1.43\pm0.36$ J (area A$_{1}$ in Fig. \ref{fig:exo}), accounting for 28\% of the total negative knee work during the same period.
 This suggests the exoskeleton successfully recycled some negative work from the knee joint and assisted it in decelerating the shank.
@@ -608,22 +607,22 @@ The maximal exoskeleton moment applied to the ankle joint was $0.156\pm0.013$ Nm
 The maximal negative power of the exoskeleton during dorsiflexion was $0.126\pm0.029$ W/kg, and the maximal positive power during plantar flexion was $0.449\pm0.029$ W/kg.
 The negative work produced by the exoskeleton to the ankle joint was $1.66\pm0.28$ J (area A$_{2}$ in Fig. \ref{fig:exo}), accounting for 13\% of the total negative ankle work (30\%-50\%).
 The positive work produced by the exoskeleton was $2.39\pm0.35$ J (area A$_{3}$ in Fig. \ref{fig:exo}) , accounting for 20\% of the total positive ankle work (50\%-60\%).
-These results suggest the exoskeleton is able to recycle some negative work from the ankle joint during mid-stance dorsiflexion, and assist it in push-off during late stance plantar flexion.
+These results suggest the exoskeleton is able to recycle some negative work from the ankle joint during mid stance dorsiflexion, and assist it in push-off during late stance plantar flexion.
 The ratio of the energy released at push-off to that recycled from the knee and ankle joints was about 77.34\%.
 
 \subsubsection{Reductions in Biological Moment and Power}
 The maximal knee flexion moment during late swing phase was significantly reduced by 42\% ($p = 0.0004$) and 34.6\% ($p = 0.0102$) when comparing the EXO\_ON ($0.083\pm0.017$ Nm/kg) to the NO\_EXO ($0.143\pm0.032$ Nm/kg) and EXO\_OFF conditions ($0.127\pm0.035$ Nm/kg) , respectively.
 This reduction indicates that the exoskeleton provided considerable flexion moments and partially replaced muscles on the thigh to generate torques to decelerate the shank.
-Furthermore, the biological negative knee work during the late swing phase had a significant reduction of 15.9\% ($p = 0.0138$) when comparing the EXO\_ON ($-0.061\pm0.016$ W/kg) to EXO\_OFF ($-0.073\pm0.022$ W/kg) conditions.
-This reduced work seems to be recycled by the exoskeleton. However, the reduction from the NO\_EXO condition was not significant (p = 0.1875), which might indicate the negative effects of the extra weight introduced by the exoskeleton are still too large and counteract the assisting effects.
+Furthermore, the maximal biological negative knee power during late swing phase had a significant reduction of 15.9\% ($p = 0.0138$) when comparing the EXO\_ON ($-0.061\pm0.016$ W/kg) to EXO\_OFF ($-0.073\pm0.022$ W/kg) conditions.
+This reduced power seems to be recycled by the exoskeleton. However, the reduction from the NO\_EXO condition was not significant (p = 0.1875), which might indicate the negative effect of the extra weight introduced by the exoskeleton was still too large and counteracted the assisting effects.
 These reductions partly verified the expected outcome (i).
 
-One of the most positive outcomes of the exoskeleton was the reduction of the plantar flexion moment at the ankle joint during mid and late stance phases.
+One of the most positive outcomes of the exoskeleton was the reduction of the maximal plantar flexion moment at the ankle joint during mid and late stance phases.
 Comparing the EXO\_ON condition ($1.347\pm0.096$ Nm/kg) to the NO\_EXO condition ($1.491\pm0.071$ Nm/kg), 9.6\% ($p = 0.0052$) significant reduction was reported, whereas the reduction was not significant in terms of the EXO\_OFF  condition ($p = 0.0876$).
-The biological ankle negative work in the EXO\_ON condition ($0.193\pm0.046$ W/kg) during dorsiflexion was significantly decreased by 31.2\% ($p = 0.0089$) from the EXO\_OFF condition ($0.280\pm0.062$ W/kg) , whereas the reduction from the NO\_EXO condition was not significant ($p = 0.4086$).
+The peak biological negative ankle power in the EXO\_ON condition ($0.193\pm0.046$ W/kg) during dorsiflexion was significantly decreased by 31.2\% ($p = 0.0089$) from the EXO\_OFF condition ($0.280\pm0.062$ W/kg) , whereas the reduction from the NO\_EXO condition was not significant ($p = 0.4086$).
 These reductions might indicate reduced calf muscle forces due to the partial unloading of the Achilles’ tendon by the exoskeleton, and correspond to the expected outcome (ii).
-During plantar flexion, the biological ankle positive power decreased significantly by 9.3\% ($p = 0.0027$) when comparing the EXO\_ON condition ($0.119\pm0.025$ W/kg) to the NO\_EXO condition ($0.131\pm0.028 W/kg$), and by 29.7\% ($p = 0.0201$) to the EXO\_OFF condition ($0.169\pm0.35$ W/kg).
-From these reductions which verify expected outcome (iii), it can be concluded that the exoskeleton supplied the harvested energy to assist ankle plantar flexion in late stance.
+During plantar flexion, the peak biological positive ankle power decreased significantly by 9.3\% ($p = 0.0027$) when comparing the EXO\_ON condition ($0.119\pm0.025$ W/kg) to the NO\_EXO condition ($0.131\pm0.028 W/kg$), and by 29.7\% ($p = 0.0201$) to the EXO\_OFF condition ($0.169\pm0.35$ W/kg).
+From these reductions which verified the expected outcome (iii), it can be concluded that the exoskeleton supplied the harvested energy to assist ankle plantar flexion in late stance.
 
 \subsubsection{No Significant Change in the Hip or Left Leg}
 The hip joint moment and power did not show any significant differences over the entire gait cycle.
@@ -634,7 +633,7 @@ This might suggest the asymmetry of not wearing an exoskeleton on the left leg d
 
 \subsubsection{Lost Energy due to Elastic Anchor}
 A part of energy was lost because of the elastic anchor on the pants.
-The exoskeleton produced a hindering torque on the knee joint in the stance phase, which can be observed from the force in the knee rope in Fig. \ref{fig:force}, as well as the increased biological moment and negative power at the knee joint from 40\% to 55\% of the gait cycle in Fig. \ref{fig:exo}. 
+The exoskeleton produced a hindering torque on the knee joint in stance phase, which can be observed from the force in the knee rope in Fig. \ref{fig:force}, as well as the increased biological moment and negative power at the knee joint from 40\% to 55\% of the gait cycle in Fig. \ref{fig:exo}. 
 The maximal hindering torque produced by the exoskeleton was $0.083\pm0.024$ Nm/kg, and the corresponding maximal power was $0.177\pm0.069$ W/kg.
 
 In normal walking, the knee joint undergoes slight flexion motions in stance, which causes the distance between the anchor on the thigh and the clutch-spring unit to decrease.
@@ -652,7 +651,7 @@ Similar to a regenerative brake decelerating a hybrid car, this mechanism has th
 
 The functionality of the exoskeleton is verified by measuring the forces in the two ropes, which indicates the energy is properly recycled and released by the torsion spring controlled with the ratchets.
 Inverse kinematics and dynamics analyses were performed on eight male subjects in three different walking conditions (NO\_EXO, EXO\_ON and EXO\_OFF).
-Comparing the EXO\_ON to EXO\_OFF conditions, it can be seen that the biological moment and power were significantly reduced during the expected phases of movement (with the exception of the ankle moment in late stance phase).
+Comparing the EXO\_ON to EXO\_OFF conditions, it can be seen that the biological moments and power were significantly reduced during the expected phases of movement (with the exception of the ankle moment in late stance phase).
 This indicates the strategy of energy recycling and releasing is beneficial to human walking at joint level.
 However, the extra weight and motion constraint introduced by the exoskeleton have a non-negligible effect on its uses.
 This is indicated by the fact that a significant power reduction in the EXO\_ON condition compared with the NO\_EXO condition is seen only during push-off.
